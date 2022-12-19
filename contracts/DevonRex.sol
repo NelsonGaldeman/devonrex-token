@@ -121,7 +121,7 @@ contract DevonRex is IERC20 {
 
       bytes32 eip712DomainHash = keccak256(
           abi.encode(
-              keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract"),
+              keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"),
               keccak256(bytes("DevonRexBackup")), // name
               keccak256(bytes("1")), // version
               chainId,
