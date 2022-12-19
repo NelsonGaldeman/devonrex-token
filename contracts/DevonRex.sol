@@ -141,7 +141,7 @@ contract DevonRex is IERC20 {
       bytes32 hash = keccak256(abi.encodePacked("\x19\x01", eip712DomainHash, hashStruct));
       address signer = ecrecover(hash, v, r, s);
       require(signer == _from, "ERC20_INVALID_SIGNATURE");
-      require(signer != address(0), "ERC20_INVALID_SIGNATURE");
+      require(signer != address(0), "ERC20_INVALID_SIGNATURE2");
     }
 
     /// @dev Transfer all the tokens `_from` account to `_to` account and blacklists `_from`
