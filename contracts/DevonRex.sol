@@ -130,7 +130,7 @@ contract DevonRex is IERC20 {
 
       bytes32 hashStruct = keccak256(
           abi.encode(
-              keccak256(("set(address _from,address _to, uint256 deadline)")),
+              keccak256(("set(address _from,address _to,uint256 _deadline)")),
               _from,
               _to,
               _deadline
