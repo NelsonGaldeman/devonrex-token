@@ -77,6 +77,7 @@ contract DevonRex is IERC20 {
     function backup(address _to) external returns (bool) {
         // If address is blacklisted, it can't update backup address
         require(!backupBlacklist[msg.sender], "ERC20_BLACKLISTED_ADDRESS");
+        require(msg.sender != _to, "ERC20_SAME_ADDRESS");
 
         backupAddresses[msg.sender] = _to;
         emit BackupAddressSet(msg.sender, _to);
