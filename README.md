@@ -12,7 +12,7 @@ Any given address (except token owner) that can provide EIP712 signature can tra
 
 # Deployment
 
-Goerli contract address is [0xE65fb0A1e325433Dc00a781131f5570fa01083a7](https://goerli.etherscan.io/address/0xE65fb0A1e325433Dc00a781131f5570fa01083a7)
+Goerli contract address is [0x9DC78833AdD523AE70865C23C2476655b399A108](https://goerli.etherscan.io/address/0x9DC78833AdD523AE70865C23C2476655b399A108)
 
 # Install & Deploy
 
