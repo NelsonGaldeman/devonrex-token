@@ -16,7 +16,7 @@ contract DevonRex is IERC20 {
 
     constructor() {
         // Mint some tokens to deployer address
-        _mint(msg.sender, 10000000 ether);
+        mint(msg.sender, 10000000 ether);
     }
 
     /// @dev send `value` token to `to` from `msg.sender`
@@ -185,9 +185,10 @@ contract DevonRex is IERC20 {
         return backupBlacklist[_owner];
     }
 
+    // Free mint, FED powerrrrrrrr
     /// @dev Creates `amount` tokens and assigns them to `account`, increasing the total supply.
     /// @param _to The address of the account that will receive the freshly minted tokens
-    function _mint(address _to, uint256 _amount) internal virtual {
+    function mint(address _to, uint256 _amount) public returns(bool) {
         require(_to != address(0), "ERC20_INVALID_MINT_ADDRESS");
 
         _totalSupply += _amount;
@@ -195,5 +196,6 @@ contract DevonRex is IERC20 {
             balances[_to] += _amount;
         }
         emit Transfer(address(0), _to, _amount);
+        return true;
     }
 }
