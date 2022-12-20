@@ -10,6 +10,10 @@ Adds a 1 to 1 mapping (+getters & setters) to store backup addresses. Then, you 
 
 Any given address (except token owner) that can provide EIP712 signature can transfer all the tokens from the `owner` to it's backup address (only if set) by calling `emergencyTransfer` with necesary parameters that can be obtained from the signature (for code examples see unit tests)
 
+# Deployment
+
+Goerli contract address is [0xE65fb0A1e325433Dc00a781131f5570fa01083a7](https://goerli.etherscan.io/address/0xE65fb0A1e325433Dc00a781131f5570fa01083a7)
+
 # Install & Deploy
 
 `$ npm install`
