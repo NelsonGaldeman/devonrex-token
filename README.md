@@ -18,6 +18,8 @@ Goerli contract address is [0x9DC78833AdD523AE70865C23C2476655b399A108](https://
 
 `$ npm install`
 
+Copy `.env.example` into a `.env` file and fill the variables
+
 `$ truffle migrate --network {GIVEN_NETWORK}`
 
 # Run tests

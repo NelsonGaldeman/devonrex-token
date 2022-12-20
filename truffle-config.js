@@ -28,24 +28,24 @@ const { ETHERSCAN_API_KEY, NODE_URL, PRIVATE_KEY } = process.env;
 module.exports = {
 
   networks: {
-    // development: {
-    //   host: "127.0.0.1",     // Localhost (default: none)
-    //   port: 8545,            // Standard Ethereum port (default: none)
-    //   network_id: "*",       // Any network (default: none)
-    // },
+    development: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 8545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+    },
     goerli: {
       provider: () => new HDWalletProvider(PRIVATE_KEY, NODE_URL),
       network_id: 5,
       timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
       skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     },
-    // polygonFork: {
-    //   // Hardhat public private keys
-    //   provider: () => new HDWalletProvider(["ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80", "59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d", "5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a"], "http://127.0.0.1:8545"),
-    //   network_id: 31337,
-    //   timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-    //   skipDryRun: false     // Skip dry run before migrations? (default: false for public nets )
-    // },
+    polygonFork: {
+      // Hardhat public private keys
+      provider: () => new HDWalletProvider(["ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80", "59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d", "5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a"], "http://127.0.0.1:8545"),
+      network_id: 31337,
+      timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
+      skipDryRun: false     // Skip dry run before migrations? (default: false for public nets )
+    },
   },
 
   // Set default mocha options here, use special reporters etc.
